@@ -1,1 +1,18 @@
-nn
+class Main {
+    public static void main (String[] args) {
+                      // Your code here
+        Scanner sc=new Scanner(System.in);
+        String str=sc.nextLine();
+        char [] findChar={'a','e','i','o','u','1','3','5','7','9'};
+        int count=0;
+        for(int i=0;i<str.length();i++){
+            char ch=str.charAt(i);
+            for(int j=0;j<findChar.length;j++){
+                if(findChar[j]==ch){
+                    count+=1;
+                }
+            }
+        }
+        System.out.println(count);
+    }
+}
