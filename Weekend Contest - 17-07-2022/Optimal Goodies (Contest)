@@ -1,1 +1,23 @@
+class Main {
+    public static void main (String[] args) {
+        Scanner s = new Scanner(System.in);
+        int n = s.nextInt();
+        int k  = s.nextInt();
+        int j = s.nextInt();
+        int res = 0;
+        int arr[] = new int[n-1];
+        //int tmp[] = new int[n-1];
+        int u=0; 
+        for(int i=0;i<n;i++){
+            int t= s.nextInt();
+            if(i==j-1) res+=t;
+            else arr[u++] = t;
+        }
 
+       // for(int i=0;i<arr.length;i++) System.out.print(arr[i]+" ");
+        k--;
+        Arrays.sort(arr);
+        for(int i=0;i<k;i++) res+=arr[i];
+        System.out.println(res);
+    }
+}
